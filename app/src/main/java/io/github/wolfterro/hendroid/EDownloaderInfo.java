@@ -1,27 +1,3 @@
-/*
-The MIT License (MIT)
-
-Copyright (c) 2017 Wolfgang Almeida
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
-
 package io.github.wolfterro.hendroid;
 
 import android.util.Log;
@@ -34,17 +10,15 @@ import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;
 
-// VERSÃO 1.1 - MOD
-
 public class EDownloaderInfo {
-    // Propriedades privadas
+    // Private properties
     // =====================
 
-    // Propriedades recebidas
+    // Incoming properties
     // ----------------------
     private String albumURL = "";
 
-    // Propriedades enviadas ou estocadas
+    // Properties sent or stored
     // ----------------------------------
     private Document doc = null;
 
@@ -55,7 +29,7 @@ public class EDownloaderInfo {
 
     private String TAG = "EDownloaderInfo.java";
 
-    // As propriedades abaixo poderão retornar
+    // The properties below may return
     // ---------------------------------------
     private ArrayList<String> imageLinks = new ArrayList<String>();
 
@@ -71,17 +45,17 @@ public class EDownloaderInfo {
     private boolean isTranslated = false;
     private boolean isOk = false;
 
-    // Construtor da Classe
+    // Class Builder
     // ====================
     public EDownloaderInfo(String albumURL) {
         this.albumURL = albumURL;
     }
 
     // ================
-    // Métodos privados
+    // Private methods
     // ================
 
-    // Recuperando informações sobre o álbum
+    // Retrieving Album Information
     // -------------------------------------
     private boolean pGetInfo() {
         if(!checkURLDomain()) {
@@ -121,15 +95,15 @@ public class EDownloaderInfo {
         }
     }
 
-    // Verificando se a URL pertence ao site
+    // Verifying that the URL belongs to the site
     // =====================================
     private boolean checkURLDomain() {
         try {
             URL u = new URL(albumURL);
             if(u.getAuthority().equals("e-hentai.nhent.ai")) {
-                // Caso o usuário insira algo além da primeira página
+                // If the user enters something beyond the first page
                 // --------------------------------------------------
-                albumURL = albumURL.replaceAll("", "");
+                albumURL = albumURL.replaceAll("\\?page=.*", "");
                 return true;
             }
             else {
@@ -147,7 +121,7 @@ public class EDownloaderInfo {
         }
     }
 
-    // Resgatando idioma do álbum
+    // Resuming album language
     // --------------------------
     private void pGetAlbumLanguage() {
         links = doc.select("div[id=gdd]");
@@ -183,7 +157,7 @@ public class EDownloaderInfo {
         }
     }
 
-    // Resgatando nome do uploader
+    // Rescuing uploader name
     // ---------------------------
     private void pGetUploader() {
         links = doc.select("div[id=gdn]");
@@ -194,7 +168,7 @@ public class EDownloaderInfo {
         }
     }
 
-    // Resgatando data do upload
+    // Redeeming upload date
     // -------------------------
     private void pGetUploadDate() {
         links = doc.select("div[id=gdd]");
@@ -219,7 +193,7 @@ public class EDownloaderInfo {
         }
     }
 
-    // Resgatando tamanho do álbum
+    // Resizing album size
     // ---------------------------
     private void pGetFileSize() {
         links = doc.select("div[id=gdd]");
@@ -244,7 +218,7 @@ public class EDownloaderInfo {
         }
     }
 
-    // Resgatando páginas do álbum, da forma como é mostrado no site
+    // Rescuing pages from the album, as it is shown on the site
     // -------------------------------------------------------------
     private void pGetAlbumPages() {
         links = doc.select("a[href]");
@@ -258,7 +232,7 @@ public class EDownloaderInfo {
         }
     }
 
-    // Resgatando link das imagens, como são mostradas no site
+    // Redeeming link of images as they are shown on the site
     // -------------------------------------------------------
     private void pGetImagePages() {
         for(Element e : links) {
@@ -287,7 +261,7 @@ public class EDownloaderInfo {
         }
     }
 
-    // Resgatando link absoluto das imagens através das páginas
+    // Rescuing absolute link from images through pages
     // --------------------------------------------------------
     private void pGetImageLinks() {
         for(int i = 0; i < imagePages.size(); i++) {
@@ -307,70 +281,70 @@ public class EDownloaderInfo {
     }
 
     // ================
-    // Métodos públicos
+    // Public methods
     // ================
 
-    // Iniciando processo de resgate de valores do álbum
+    // Starting process of recovering album values
     // -------------------------------------------------
     public void getInfo() {
         isOk = pGetInfo();
     }
 
-    // Verificando se o processo foi concluído com sucesso
+    // Checking if the process completed successfully
     // ---------------------------------------------------
     public boolean isSuccessful() {
         return isOk;
     }
 
-    // Resgatando link absoluto das imagens
+    // Rescuing absolute link from images
     // ------------------------------------
     public ArrayList<String> getImages() {
         return imageLinks;
     }
 
-    // Resgatando número de páginas (imagens) do álbum
+    // Redeeming number of pages (images) from the album
     // -----------------------------------------------
     public int getAlbumSize() {
         return pages;
     }
 
-    // Resgatando idioma do álbum
+    // Resuming album language
     // --------------------------
     public String getAlbumLanguage() {
         return albumLanguage;
     }
 
-    // Verificando se o álbum é uma tradução
+    // Checking if the album is a translation
     // -------------------------------------
     public boolean isTranslated() {
         return isTranslated;
     }
 
-    // Resgatando nome do uploader
+    // Rescuing uploader name
     // ---------------------------
     public String getUploader() {
         return uploader;
     }
 
-    // Resgatando data do upload
+    // Redeeming upload date
     // -------------------------
     public String getUploadDate() {
         return uploadDate;
     }
 
-    // Resgatando tamanho do álbum
+    // Resizing album size
     // ---------------------------
     public String getFileSize() {
         return fileSize;
     }
 
-    // Resgatando nome do álbum
+    // Resuming album name
     // ------------------------
     public String getAlbumName() {
         return albumName;
     }
 
-    // Resgatando mensagem de erro
+    // Rescuing error message
     // ---------------------------
     public String getError() {
         return error;

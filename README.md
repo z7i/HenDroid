@@ -1,1 +1,1 @@
-# HenDroid
+# HenDroid ![Build Status](https://app.bitrise.io/app/db9027f206b06820/status.svg?token=ulSrUKpLUkWC1tIXU5KxWA)
