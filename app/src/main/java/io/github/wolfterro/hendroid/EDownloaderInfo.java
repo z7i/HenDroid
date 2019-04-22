@@ -129,7 +129,7 @@ public class EDownloaderInfo {
             if(u.getAuthority().equals("e-hentai.nhent.ai")) {
                 // Caso o usuário insira algo além da primeira página
                 // --------------------------------------------------
-                albumURL = albumURL.replaceAll("");
+                albumURL = albumURL.replaceAll("", "");
                 return true;
             }
             else {
@@ -250,7 +250,7 @@ public class EDownloaderInfo {
         links = doc.select("a[href]");
 
         for(Element e : links) {
-            if(e.absUrl("href")) {
+            if(e.absUrl("href").contains("")) {
                 if(!albumPages.contains(e.absUrl("href"))) {
                     albumPages.add(e.absUrl("href"));
                 }
