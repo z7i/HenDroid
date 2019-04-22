@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notAvailable">N/A</string>
+
+    <!-- Strings from activity_main.xml -->
+    <string name="insertAlbumURL">Insert the Album\'s URL:</string>
+    <string name="checkAlbum">Check Album</string>
+
+    <string name="obtainingInformations">Obtaining Informations...</string>
+    <string name="standBy">Please stand by while the album informations are being recovered.</string>
+    <string name="thisCanTakeAWhile">Depending from the album\'s size, this procedure may take a while...</string>
+    <!-- ============================= -->
+
+    <!-- Strings from activity_about.xml -->
+    <string name="about">About</string>
+    <string name="aboutHenDroid">About HenDroid</string>
+    <string name="aboutText">HenDroid is a simple app that can show album informations and download
+        them directly from e-hentai.
+        \n\nWith those informations, it\'s possible to view the album\'s cover art, it\'s name and
+        the number of pages, allowing the app to download all doujinshis and mangas directly to your
+        device.</string>
+    <string name="aboutLicensed">This app was released under the terms of the MIT License.</string>
+    <!-- ============================= -->
+
+    <!-- Strings from activity_info.xml -->
+    <string name="albumInformations">Album Informations</string>
+    <string name="cover">Cover</string>
+    <string name="albumName">Album Name</string>
+    <string name="albumLanguage">Album Language</string>
+    <string name="uploader">Uploader</string>
+    <string name="uploadDate">Upload Date</string>
+    <string name="size">Size</string>
+    <string name="numberOfPages">Number of Pages</string>
+    <string name="outputDir">Output Directory</string>
+    <string name="downloadAlbum">Download Album</string>
+
+    <string name="downloadingAlbum">Downloading Album...</string>
+    <string name="pleaseWaitWhileImagesAreBeingDownloaded">Please wait while the images are being
+        downloaded.</string>
+    <string name="downloadingImageXFromY" formatted="false">Downloading image %d of %d...</string>
+    <string name="downloadFinishedCheckOutputDir">Download finished! Check the output directory.</string>
+    <!-- ============================ -->
+
+    <!-- Error messages -->
+    <string name="pleaseInsertURL">Please, insert the album\'s URL and try again!</string>
+    <string name="errorNoPermissionGiven">Error! This app cannot work properly without the needed permissions!</string>
+    <string name="errorCouldNotObtainInformations">Error! Could not obtain informations! Error:</string>
+    <!-- ================= -->
+</resources>

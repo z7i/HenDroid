@@ -1,0 +1,56 @@
+<resources>
+    <!-- DO NOT TRANSLATE! NÃO TRADUZIR! -->
+    <string name="app_name" translatable="false">HenDroid</string>
+    <string name="app_version" translatable="false">1.0</string>
+    <string name="henDroidRepo" translatable="false">https://github.com/z7i/HenDroid</string>
+    <string name="baseURL" translatable="false">https://e-hentai.org/g/*****/*****</string>
+    <string name="ball" translatable="false">• ● • ● • ● •</string>
+    <!-- =============================== -->
+
+    <string name="notAvailable">N/A</string>
+
+    <!-- Strings from activity_main.xml -->
+    <string name="insertAlbumURL">Masukkan URL Album:</string>
+    <string name="checkAlbum">Periksa Album</string>
+
+    <string name="obtainingInformations">Memperoleh Informasi ...</string>
+    <string name="standBy">Harap siaga ketika informasi album sedang dipulihkan.</string>
+    <string name="thisCanTakeAWhile">Tergantung dari ukuran album, prosedur ini mungkin memakan waktu cukup lama ...</string>
+    <!-- ============================= -->
+
+    <!-- Strings from activity_about.xml -->
+    <string name="about">Tentang</string>
+    <string name="aboutHenDroid">Tentang HenDroid</string>
+    <string name="aboutText">HenDroid adalah aplikasi sederhana yang dapat menampilkan informasi dan unduhan album
+         mereka langsung dari e-hentai.
+         \n\nDengan informasi tersebut, dimungkinkan untuk melihat sampul album, nama dan
+         jumlah halaman, memungkinkan aplikasi untuk mengunduh semua doujinshis dan manga langsung ke Anda
+         alat.</string>
+    <string name="aboutLicensed">Aplikasi ini dirilis di bawah ketentuan Lisensi MIT.</string>
+    <!-- ============================= -->
+
+    <!-- Strings from activity_info.xml -->
+    <string name="albumInformations">Informasi Album</string>
+    <string name="cover">Cover</string>
+    <string name="albumName">Nama Album</string>
+    <string name="albumLanguage">Bahasa Album</string>
+    <string name="uploader">Pengunggah</string>
+    <string name="uploadDate">Tanggal Unggah</string>
+    <string name="size">Ukuran</string>
+    <string name="numberOfPages">Jumlah halaman</string>
+    <string name="outputDir">Direktori Output</string>
+    <string name="downloadAlbum">Unduh Album</string>
+
+    <string name="downloadingAlbum">Mengunduh Album...</string>
+    <string name="pleaseWaitWhileImagesAreBeingDownloaded">Harap tunggu sementara gambar sedang
+         diunduh.</string>
+    <string name="downloadingImageXFromY" formatted="false">Mengunduh gambar %d dari %d...</string>
+    <string name="downloadFinishedCheckOutputDir">Pengunduhan selesai! Periksa direktori output.</string>
+    <!-- ============================ -->
+
+    <!-- Error messages -->
+    <string name="pleaseInsertURL">Silakan, masukkan URL album dan coba lagi!</string>
+    <string name="errorNoPermissionGiven">Kesalahan! Aplikasi ini tidak dapat berfungsi dengan baik tanpa izin yang diperlukan!</string>
+    <string name="errorCouldNotObtainInformations">Kesalahan! Tidak dapat memperoleh informasi! Kesalahan:</string>
+    <!-- ================= -->
+</resources>
